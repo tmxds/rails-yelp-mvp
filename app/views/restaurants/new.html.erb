@@ -1,0 +1,17 @@
+<h1>Create a new restaurant</h1>
+
+<%= form_with model: @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %>
+  <%= f.label :category %>
+  <%= f.radio_button :category, 'chinese' %>Chinese
+  <%= f.radio_button :category, 'italian' %>Italian
+  <%= f.radio_button :category, 'japanese' %>Japanese
+  <%= f.radio_button :category, 'french' %>French
+  <%= f.radio_button :category, 'belgian' %>Belgian
+  <%= f.submit %>
+<% end %>
